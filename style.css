@@ -1,0 +1,354 @@
+html, body {
+    background-color: #ace7ff;
+    font-size: 62.5%; /* 1rem = 10px */
+    line-height: 1.6;
+    margin: 0;
+    display: flex;
+    cursor: default;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+}
+
+.main {
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1, h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    width: 100%;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 4.5rem; /* Responsive font size for large screens, falls back to a larger size on smaller screens */
+    color: #e17171;
+    margin-top: 1%;
+    position: relative;
+    text-shadow: 0.04em 0.04em 0 rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2rem; /* Smaller than h1 but still significant */
+    color: #333;
+    margin-top: 2%;
+}
+
+/* Styles for h1 spans */
+h1 span {
+    font-size: 10.6vw;
+    line-height: 1em;
+    z-index: 100;
+    display: block;
+}
+
+/* More span styles */
+h1 span, h1 span:after {
+    font-weight: 600;
+    color: #e17171; /* Consistent color for Valentine theme */
+    display: inline-block;
+    position: relative;
+    letter-spacing: 0.16em;
+}
+
+span.one:after {
+    content: "Will you";
+}
+
+span.two:after {
+    content: "bee my";
+}
+
+span.three:after {
+    content: "valentine?";
+}
+
+@media screen and (min-width: 880px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h1 span {
+        font-size: 6rem;
+    }
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shadow {
+    height: 45px;
+    width: 170px;
+    border-radius: 50%;
+    background-color: #88badd;
+    -webkit-animation: shadow 2s ease-in-out infinite;
+    animation: shadow 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes blink {
+
+    0%,
+    9%,
+    11%,
+    30%,
+    32%,
+    33%,
+    35%,
+    54%,
+    56%,
+    79%,
+    81%,
+    100% {
+        -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+        clip-path: ellipse(50% 50% at 50% 50%);
+    }
+
+    10%,
+    31%,
+    34%,
+    55%,
+    80% {
+        -webkit-clip-path: ellipse(50% 5% at 50% 50%);
+        clip-path: ellipse(50% 5% at 50% 50%);
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    9%,
+    11%,
+    30%,
+    32%,
+    33%,
+    35%,
+    54%,
+    56%,
+    79%,
+    81%,
+    100% {
+        -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+        clip-path: ellipse(50% 50% at 50% 50%);
+    }
+
+    10%,
+    31%,
+    34%,
+    55%,
+    80% {
+        -webkit-clip-path: ellipse(50% 5% at 50% 50%);
+        clip-path: ellipse(50% 5% at 50% 50%);
+    }
+}
+
+@-webkit-keyframes hover {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes hover {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@-webkit-keyframes shadow {
+
+    0%,
+    100% {
+        width: 170px;
+    }
+
+    50% {
+        width: 180px;
+    }
+}
+
+@keyframes shadow {
+
+    0%,
+    100% {
+        width: 170px;
+    }
+
+    50% {
+        width: 180px;
+    }
+}
+
+@-webkit-keyframes flight-left {
+
+    0%,
+    100% {
+        width: 150px;
+        transform: skewY(20deg);
+    }
+
+    50% {
+        width: 125px;
+        transform: skewY(25deg);
+    }
+}
+
+@keyframes flight-left {
+
+    0%,
+    100% {
+        width: 150px;
+        transform: skewY(20deg);
+    }
+
+    50% {
+        width: 125px;
+        transform: skewY(25deg);
+    }
+}
+
+@-webkit-keyframes flight-right {
+
+    0%,
+    100% {
+        width: 150px;
+        transform: skewY(-20deg);
+    }
+
+    50% {
+        width: 125px;
+        transform: skewY(-25deg);
+    }
+}
+
+@keyframes flight-right {
+
+    0%,
+    100% {
+        width: 150px;
+        transform: skewY(-20deg);
+    }
+
+    50% {
+        width: 125px;
+        transform: skewY(-25deg);
+    }
+}
+
+@-webkit-keyframes flight-little {
+
+    0%,
+    100% {
+        height: 110px;
+    }
+
+    50% {
+        height: 100px;
+    }
+}
+
+@keyframes flight-little {
+
+    0%,
+    100% {
+        height: 110px;
+    }
+
+    50% {
+        height: 100px;
+    }
+}
+
+@-webkit-keyframes wobble {
+    0%, 50%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    75% { transform: rotate(-10deg); }
+}
+
+@keyframes wobble {
+    0%, 50%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    75% { transform: rotate(-10deg); }
+}
+
+#falling-hearts {
+    animation: wobble 60s ease-in infinite;
+    position: fixed;
+    inset: 0 0 0 0;
+    pointer-events: none;
+}
+
+.heart {
+    pointer-events: none;
+    opacity: 0;
+    z-index: 1000;
+    position: fixed;
+}
+
+.big-message {
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #ffcccb;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 50%;
+    margin: auto;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.big-message h3 {
+    font-size: 2.5rem; /* Larger for headings within big-message */
+}
+
+.big-message p {
+    font-size: 1.5rem; /* Larger for text within big-message */
+}
+
+.big-message h3 {
+    font-size: 3.0rem; /* Now 3.0rem will equal 30px */
+    margin-bottom: 10px; /* Adds some space below the heading */
+}
+
+/* For the h2 tag and the span inside it */
+h2 {
+    font-size: 3.0rem; /* Reduces the font size */
+    margin: 20px 0; /* Adds margin to the top and bottom */
+}
+
+h2 span#valentine {
+    font-size: 3.0rem; /* Further reduces the font size for the span */
+    display: block; /* Makes the span behave like a block element */
+    margin-top: 10px; /* Adds a little space above the span */
+}
+
+/* You may also want to ensure the entire .main content is centered */
+.main {
+    width: 80%; /* Adjusts the width of the main content */
+    margin: auto; /* Centers the main content */
+}
