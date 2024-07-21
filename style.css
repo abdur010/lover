@@ -361,6 +361,8 @@ h2 span#valentine {
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, box-shadow 0.3s;
+    width: auto; /* Ensure the width is auto to fit the content */
+    min-width: 100px; /* Set a minimum width */
 }
 
 .pretty-button:hover {

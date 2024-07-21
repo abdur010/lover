@@ -50,10 +50,10 @@
     playMusicButton.addEventListener("click", () => {
         if (backgroundMusic.paused) {
             backgroundMusic.play();
-            playMusicButton.innerText = "Pause Music";
+            playMusicButton.innerText = "Press Me 🫶";
         } else {
             backgroundMusic.pause();
-            playMusicButton.innerText = "Play Music";
+            playMusicButton.innerText = "I would love you till there is light in my eye";
         }
     });
 })();
