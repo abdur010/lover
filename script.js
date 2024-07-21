@@ -2,11 +2,11 @@
     const urlParams = new URLSearchParams(window.location.search);
     const valentine = urlParams.get("valentine");
     if (valentine) {
-      document.getElementById("valentine").innerText = valentine;
+        document.getElementById("valentine").innerText = valentine;
     }
     const message = urlParams.get("message");
     if (message) {
-      document.getElementById("message").innerText = message;
+        document.getElementById("message").innerText = message;
     }
 
     const randomInt = (n) => Math.floor(Math.random() * n);
@@ -32,16 +32,28 @@
       `;
     let numberOfHearts = 45;
     while (numberOfHearts--) {
-      var heartDiv = document.createElement("div");
-      heartDiv.classList.add("heart");
-      heartDiv.style = `animation: spin ${randomInt(14) + 6}s ease-in infinite;
+        var heartDiv = document.createElement("div");
+        heartDiv.classList.add("heart");
+        heartDiv.style = `animation: spin ${randomInt(14) + 6}s ease-in infinite;
                           top: ${randomInt(40)}vh;
                          left: ${randomInt(100)}vw;
                     font-size: ${randomInt(40) + 20}px;
                         color: ${["#d00", "#e66", "#fcc"][randomInt(3)]};`;
-      heartDiv.textContent = ["\u2661", "\u2665"][randomInt(2)];
-      document.getElementById("falling-hearts").appendChild(heartDiv);
+        heartDiv.textContent = ["\u2661", "\u2665"][randomInt(2)];
+        document.getElementById("falling-hearts").appendChild(heartDiv);
     }
+
+    // Play/Pause background music when the button is clicked
+    const playMusicButton = document.getElementById("play-music-button");
     const backgroundMusic = document.getElementById("background-music");
-    backgroundMusic.play();
-  })();
+
+    playMusicButton.addEventListener("click", () => {
+        if (backgroundMusic.paused) {
+            backgroundMusic.play();
+            playMusicButton.innerText = "Pause Music";
+        } else {
+            backgroundMusic.pause();
+            playMusicButton.innerText = "Play Music";
+        }
+    });
+})();
