@@ -347,6 +347,27 @@ h2 span#valentine {
     margin-top: 10px; /* Adds a little space above the span */
 }
 
+.pretty-button {
+    background-color: #ff69b4;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.pretty-button:hover {
+    background-color: #ff1493;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* You may also want to ensure the entire .main content is centered */
 .main {
     width: 80%; /* Adjusts the width of the main content */
