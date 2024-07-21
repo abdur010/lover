@@ -42,4 +42,6 @@
       heartDiv.textContent = ["\u2661", "\u2665"][randomInt(2)];
       document.getElementById("falling-hearts").appendChild(heartDiv);
     }
+    const backgroundMusic = document.getElementById("background-music");
+    backgroundMusic.play();
   })();
