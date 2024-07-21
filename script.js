@@ -52,7 +52,7 @@
             backgroundMusic.play();
             playMusicButton.innerText = "Press Me 🫶";
         } else {
-            backgroundMusic.pause();
+            // backgroundMusic.pause();
             playMusicButton.innerText = "I would love you till there is light in my eye";
         }
     });
