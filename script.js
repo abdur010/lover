@@ -51,6 +51,6 @@
         if (backgroundMusic.paused) {
             backgroundMusic.play();
         }
-        playMusicButton.innerText = "I would love you till there is light in my eye";
+        playMusicButton.innerText = " 🎶 I would love you till there is light in my eye 🎶";
     });
 })();
